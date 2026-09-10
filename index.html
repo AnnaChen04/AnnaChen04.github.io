@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="lamont">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anna Chen — Ocean Biogeochemistry &amp; Carbon-Cycle Modeling</title>
+<meta name="description" content="Anna Chen is a senior at Columbia University, double-majoring in Climate System Science and Applied Mathematics.">
+<meta property="og:title" content="Anna Chen — Ocean Biogeochemistry Modeling">
+<meta property="og:description" content="Senior at Columbia University working on surface ocean pCO₂ testbed analyses, paleo sea-surface temperature reconstruction, and marine primary productivity at Lamont-Doherty Earth Observatory.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='25' x='4' font-size='24'>🌊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Anna Chen</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications &amp; Awards</a>
+      <a href="beyond.html">Beyond the Lab</a>
+      <a href="contact.html">Contact</a>
+      <a class="cv-link" href="assets/docs/Anna_Chen_CV.pdf">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Columbia University · Lamont-Doherty Earth Observatory</div>
+        <h1>Anna Chen<span class="cn">陈一语</span></h1>
+        <p class="lede" style="margin-top:24px">
+          I am a senior at Columbia University, double-majoring in <strong>Climate System Science</strong> and
+          <strong>Applied Mathematics</strong>. Currently, I work in two distinct geochemistry labs at the 
+          Lamont-Doherty Earth Observatory, mentored by Prof. 
+          <strong>Galen McKinley</strong> and Prof. <strong>Jerry McManus</strong>, respectively.
+        </p>
+        <p class="lede">
+          I am applying to PhD programs in computational ocean biogeochemistry
+          for Fall 2027 enrollment, with broad interests across marine microbial processes, transport and mixing, 
+          ocean acidification, and more.
+        </p>
+        <p class="portrait-cap">
+        	  AI statement: <em>The design of this webpage is coded by Claude (Opus 5), with texts, figures, documents, and photos supplied by AC.</em>
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="assets/docs/Anna_Chen_CV.pdf">Download CV (PDF)</a>
+          <a class="btn" href="research.html">Research</a>
+          <a class="btn btn-quiet" href="mailto:yc4406@columbia.edu">yc4406@columbia.edu</a>
+        </div>
+      </div>
+      <div>
+        <img class="portrait" src="assets/img/anna-portrait.jpg"
+             alt="Portrait of Anna Chen on the Columbia University campus" width="900" height="900">
+        <p class="portrait-cap">New York, NY · Expected B.A. May 2027</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ RESEARCH INTERESTS ============ -->
+  <section class="rule-top">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Research Interests</div>
+        <h2>Modeling Ocean Biogeochemistry, Carbon, and Temperature</h2>
+      </div>
+
+      <div class="narrow" style="margin-top:44px">
+        <p>
+          My research centers on modeling the ocean carbon and biogeochemical cycles. I am most
+          interested in understanding and improving hindcast and forecast models, particularly disentangling 
+          impacts from internal variability from that of model structure; 
+          in resolving regional-scale biogeochemical fluxes with
+          tractable statistical and algebraic methods; and in understanding how sparse and uneven
+          observational coverage propagates into our model estimates.
+        </p>
+        <p>
+          For my PhD work, I want to utilize the full range of available data — Argo floats, satellite retrievals,
+          and ship-track and bottle measurements — and to characterize the distinct uncertainties
+          each source carries. The Arctic and the Southern Ocean draw my curiosity most, since both
+          remain sparsely observed and biogeochemically complex. Having also worked in
+          paleoceanographic reconstruction, I would like to potentially bring state-of-the-art modeling methods
+          to bear on constraining uncertainty in the paleo ocean as well.
+        </p>
+      </div>
+      
+      <div class="diagram-block">
+        <svg viewBox="0 0 920 400" role="img"
+             aria-label="Schematic cross-section of the ocean carbon system. Air–sea carbon dioxide flux crosses the sea surface; primary productivity occurs in the sunlit euphotic zone and exports sinking carbon to depth; a sediment core recovers temperature proxies from the seafloor.">
+          <defs>
+            <pattern id="sed" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="9" stroke="currentColor" stroke-width="1" opacity="0.22"/>
+            </pattern>
+            <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9 z" class="svg-fill"/>
+            </marker>
+            <marker id="ar-soft" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9 z" class="svg-fill-soft"/>
+            </marker>
+          </defs>
+
+          <!-- zones -->
+          <rect x="20" y="14" width="880" height="76" class="svg-band"/>
+          <text x="34" y="40" class="svg-label-sm">ATMOSPHERE</text>
+          <line x1="20" y1="90" x2="900" y2="90" class="svg-line"/>
+          <text x="34" y="118" class="svg-label-sm">SURFACE OCEAN</text>
+          <text x="34" y="272" class="svg-label-sm">OCEAN INTERIOR</text>
+
+          <!-- euphotic zone -->
+          <line x1="300" y1="162" x2="596" y2="162" class="svg-line-soft" stroke-dasharray="4 5"/>
+          <text x="606" y="167" class="svg-label-sm">euphotic zone</text>
+
+          <!-- seafloor + sediment -->
+          <path d="M20,318 C160,306 250,330 400,320 C540,311 640,332 760,322 C830,316 870,324 900,320"
+                class="svg-line-soft"/>
+          <path d="M20,318 C160,306 250,330 400,320 C540,311 640,332 760,322 C830,316 870,324 900,320 L900,366 L20,366 Z"
+                fill="url(#sed)" stroke="none"/>
+          <text x="34" y="352" class="svg-label-sm">SEAFLOOR SEDIMENT</text>
+
+          <!-- (1) air–sea CO2 flux -->
+          <text x="196" y="28" class="svg-label" text-anchor="middle">CO₂</text>
+          <line x1="188" y1="38" x2="188" y2="84" class="svg-line" marker-end="url(#ar)"/>
+          <line x1="208" y1="84" x2="208" y2="38" class="svg-line" marker-end="url(#ar)"/>
+          <circle cx="230" cy="52" r="11" class="svg-fill"/>
+          <text x="230" y="57" class="svg-num" text-anchor="middle">1</text>
+          <text x="248" y="58" class="svg-label">air–sea CO₂ flux</text>
+
+          <!-- (2) productivity + biological pump -->
+          <g class="svg-fill">
+            <circle cx="336" cy="118" r="3.4"/><circle cx="362" cy="106" r="2.6"/>
+            <circle cx="386" cy="126" r="3.8"/><circle cx="410" cy="110" r="2.8"/>
+            <circle cx="352" cy="142" r="2.6"/><circle cx="402" cy="146" r="3.2"/>
+            <circle cx="430" cy="132" r="2.4"/>
+          </g>
+          <circle cx="332" cy="200" r="11" class="svg-fill"/>
+          <text x="332" y="205" class="svg-num" text-anchor="middle">2</text>
+          <text x="350" y="206" class="svg-label">primary productivity</text>
+
+          <g class="svg-fill-soft" opacity="0.75">
+            <circle cx="492" cy="182" r="2.6"/><circle cx="501" cy="212" r="2.2"/>
+            <circle cx="496" cy="244" r="2.6"/><circle cx="506" cy="272" r="2"/>
+          </g>
+          <line x1="500" y1="176" x2="500" y2="300" class="svg-line-soft" stroke-dasharray="2 7" marker-end="url(#ar-soft)"/>
+          <text x="488" y="258" class="svg-label-sm" text-anchor="end">sinking carbon</text>
+
+          <!-- (3) sediment core -->
+          <rect x="640" y="248" width="26" height="108" class="svg-line"/>
+          <line x1="653" y1="248" x2="653" y2="212" class="svg-line" marker-end="url(#ar)"/>
+          <line x1="666" y1="286" x2="695" y2="286" class="svg-line-soft"/>
+          <circle cx="706" cy="286" r="11" class="svg-fill"/>
+          <text x="706" y="291" class="svg-num" text-anchor="middle">3</text>
+          <text x="724" y="280" class="svg-label">sediment temperature<tspan x="724" dy="19">proxies</tspan></text>
+        </svg>
+
+        <p class="diagram-cap">
+          <b>1</b> — Surface ocean pCO<sub>2</sub> sets the air–sea carbon flux, and observation-based
+          statistical reconstructions of it are validated against model testbeds (McKinley Lab).
+          <b>2</b> — Phytoplankton in the euphotic zone fix carbon; the temperature and
+          pCO<sub>2</sub> conditions where they grow determine how much (Hurley Lab).
+          <b>3</b> — Temperature proxies preserved in seafloor sediment record how the surface ocean
+          behaved during past warm intervals (McManus Lab).
+        </p>
+      </div>
+
+      <div class="narrow" style="margin-top:44px">
+        <div class="btn-row">
+          <a class="btn" href="research.html">See the three projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="rule-top">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Skills</div>
+        <h2>What I work with</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-col">
+          <h3>Programming</h3>
+          <ul>
+            <li>Python</li>
+            <li>R</li>
+            <li>LaTeX</li>
+            <li>Markdown</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>Methods</h3>
+          <ul>
+            <li>Reduced-Space Optimal Interpolation</li>
+            <li>Empirical Orthogonal Function (EOF) analysis</li>
+            <li>Multi-model ensemble benchmarking</li>
+            <li>Uncertainty propagation</li>
+            <li>Data mining</li>
+            <li>Numerical methods</li>
+            <li>Differential Equations (ODEs)</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>Datasets</h3>
+          <ul>
+            <li>CMIP6 Earth System Models</li>
+            <li>Global Ocean Biogeochemical Models (GOBMs)</li>
+            <li>SOCAT, GLODAP, LDEO pCO<sub>2</sub> datasets</li>
+            <li>Hadley Centre Sea Ice and Sea Surface Temperature (HadISST) dataset</li>
+            <li>World Ocean Atlas (WOA)</li>
+            <li>SeaWiFS satellite-derived Carbon-based Production Model</li>
+            <li>NOAA Paleoclimatology database</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>Laboratory</h3>
+          <ul>
+            <li>Phytoplankton culturing</li>
+            <li>Flow cytometry</li>
+            <li>Media preparation</li>
+            <li>Sterile technique</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>Languages</h3>
+          <ul>
+            <li>Chinese <span>— native</span></li>
+            <li>English <span>— fluent</span></li>
+            <li>German <span>— elementary</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Anna Chen · Columbia University</div>
+    <div>
+      <a href="mailto:yc4406@columbia.edu">yc4406@columbia.edu</a> ·
+      <a href="https://orcid.org/0009-0008-9717-116X">ORCID</a> ·
+      <a href="https://www.linkedin.com/in/anna-yiyu-chen/">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

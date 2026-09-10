@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="lamont">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Anna Chen</title>
+<meta name="description" content="Three research projects at Lamont-Doherty Earth Observatory: surface ocean pCO₂ testbed experiments, Last Interglacial sea-surface temperature reconstruction, and geochemical drivers of marine phytoplankton productivity.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='25' x='4' font-size='24'>🌊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Anna Chen</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications &amp; Awards</a>
+      <a href="beyond.html">Beyond the Lab</a>
+      <a href="contact.html">Contact</a>
+      <a class="cv-link" href="assets/docs/Anna_Chen_CV.pdf">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap">
+
+  <div class="sec-head" style="padding-top:56px">
+    <div class="kicker">Research</div>
+    <h2>Current and Past Projects</h2>
+    <p>
+      Conducted at Lamont-Doherty Earth Observatory of Columbia University, Palisades, NY.
+    </p>
+  </div>
+
+  <!-- ============================================================
+       PROJECT 1 — McKINLEY
+       ============================================================ -->
+  <article class="project" id="pco2-testbeds">
+    <div class="proj-num">01</div>
+    <h2>Evaluating the Impacts of Model Choice on Assessment of Surface Ocean pCO<sub>2</sub>
+        Reconstruction Skill in Climate Model Testbeds</h2>
+
+    <div class="proj-meta">
+      <span><b>Lab</b> · <a href="https://galenmckinley.github.io/">McKinley Ocean Carbon Group</a>, LDEO</span>
+      <span><b>PI &amp; Mentor</b> · Galen A. McKinley</span>
+      <span><b>Collaborators</b> · Thea H. Heimdal, Amanda R. Fay</span>
+      <span><b>International Collaboration</b> · Surface Ocean CO<sub>2</sub> Mapping (SOCOM) Program</span>
+      <span><b>Spring 2026 – present</b></span>
+    </div>
+
+    <div class="tags">
+      <span class="tag tag-accent">Senior thesis</span>
+      <span class="tag tag-accent">First-author manuscript in preparation</span>
+      <span class="tag">AGU 2026 poster</span>
+      <span class="tag tag-fund">Comer Climate Fellowship</span>
+      <span class="tag">Python</span>
+    </div>
+
+    <div class="proj-body">
+      <div>
+        <p>
+          The ocean absorbed roughly 29% of anthropogenic CO<sub>2</sub> emissions over the past
+          decade. Quantifying that sink from sparse measurements relies on observation-based data
+          products, which are validated against Global Ocean Biogeochemical Models and Earth System
+          Models used as <em>testbed</em> truths: the data product is given only the coverage of
+          real observations, then asked to reconstruct the model's full pCO<sub>2</sub> field.
+        </p>
+        <p>
+          Whether it matters <em>which</em> models serve as the testbed had not been tested. This
+          project assesses 7 data products by ensemble-averaging according to testbed model
+          choice, using 5 GOBMs over 2001–2021 and 6 triple-member ESMs over 1982–2023.
+        </p>
+      </div>
+      <div class="role-box">
+        <h3>My role</h3>
+        <p>
+          I built and ran the analysis in Python. For every data product I computed bias, unbiased
+          RMSE, and correlation against its testbed at regional, basin, and global scales, then
+          applied the same metrics to each testbed model against independent observations from
+          GLODAP, SOCAT, and the LDEO pCO<sub>2</sub> database — and evaluated all 31 possible
+          ensemble combinations of the five GOBMs.
+        </p>
+        <p>
+          The results show that ranking testbed models by their skill against observations has only
+          a minor effect on assessed reconstruction skill, and that ensemble-averaging generally
+          improves it. The equatorial and Southern Ocean subtropical biomes are the exception: there,
+          including certain testbeds can marginally worsen ensemble-averaged skill, but never improve
+          it. This work is my senior thesis and a first-author manuscript in preparation.
+        </p>
+      </div>
+    </div>
+
+    <figure class="fig">
+      <div class="fig-two">
+        <div class="fig-frame" data-zoom="assets/figures/mckinley-fig1.png" data-zoom-deep
+             data-zoom-alt="Averaged annual mean bias for GOBM testbed reconstructions, one-model ensembles">
+          <img src="assets/figures/mckinley-fig1.png" alt="Reconstruction bias across seven methods for one-model testbed ensembles, by biome">
+        </div>
+        <div class="fig-frame" data-zoom="assets/figures/mckinley-fig2.png" data-zoom-deep
+             data-zoom-alt="Averaged annual mean bias for GOBM testbed reconstructions, four-model ensembles">
+          <img src="assets/figures/mckinley-fig2.png" alt="Reconstruction bias across seven methods for four-model testbed ensembles, by biome">
+        </div>
+      </div>
+      <figcaption>
+        Area-weighted 2001–2021 averaged annual mean bias of reconstructed global-field surface
+        pCO<sub>2</sub> against various GOBM testbed ensemble choices, for single-model (left) and
+        four-model (right) ensembles. Datasets are collapsed to time series and area-weighted to
+        calculate bias. Grey boxes show the inter-ensemble spread: the interquartile range of the
+        2001–2021 average taken over all 31 possible ensemble combinations (1 to 5 members), with
+        whiskers showing max–min. Truths are masked with 100 and 1000 µatm cutoffs; cutoffs are not
+        applied to the reconstructions. Subplots show different superbiomes.
+        <span class="zoom-hint">Click either figure to enlarge</span>
+      </figcaption>
+    </figure>
+
+    <div class="resources">
+      <h3>Materials</h3>
+      <div class="res-grid">
+        <div>
+          <details class="abstract">
+            <summary>Read the AGU 2026 abstract</summary>
+            <div class="abstract-body">
+              <p>
+                Over the past decade, the ocean carbon sink absorbed 29% of total anthropogenic
+                CO<sub>2</sub> emissions. To quantify this sink from sparse observations, Global Ocean
+                Biogeochemical Models (GOBMs) and Earth System Models (ESMs) simulate the global ocean
+                carbon cycle, typically at 1-by-1-degree horizontal resolution. Recent assessments of
+                observation-based ocean carbon data products use GOBMs and ESMs as “testbed” truths:
+                data products sample the testbeds at the spatio-temporal coverage of independent
+                observations, then reconstruct surface ocean pCO<sub>2</sub> using statistical and
+                machine learning techniques. The testbed approach then allows for a comprehensive
+                assessment of the data product’s ability to reconstruct the full field in the context
+                of sparse pCO<sub>2</sub> data coverage. It has not been studied whether differences in
+                the testbed model skill in representing real-world mean and seasonality of
+                pCO<sub>2</sub> may impact testbed results. Thus, this study assesses the data products
+                by ensemble-averaging based on their testbed model choice. We use 5 GOBMs over
+                2001–2021 and 18 ESM members over 1982–2023. Considering regional, basin, and global
+                scales, the bias, unbiased RMSE, and correlation are calculated of each data product
+                against its testbed. Likewise, the same metrics are computed for each testbed model
+                against real-world independent data from GLODAP, SOCAT, and LDEO pCO<sub>2</sub>
+                databases. Results show that sorting the testbed models based on their skill against
+                observations has a minor impact on the assessment of reconstruction skill across 7 data
+                products. Echoing published findings, ensemble-averaging generally improves global and
+                regional reconstruction skill compared to using single-member testbeds. Nonetheless,
+                the equatorial and Southern Ocean subtropical biomes show greater sensitivity to
+                testbed choice, where including certain testbeds can marginally worsen, but not
+                improve, ensemble-averaged skill. This study highlights the versatility of testbeds and
+                endorses the use of ensemble-averaging in multi-model testbed experiments, since
+                specific testbed model choices can harm regional reconstruction skills, especially in
+                observation-scarce and biogeochemically complex biomes.
+              </p>
+              <p class="session">
+                <b>AGU 2026 Annual Meeting</b>, San Francisco · Session <b>A072</b> — From Physics to
+                AI: Benchmarking, Bias Diagnosis, and Process Representation in Earth System Models.<br>
+                Anna Chen, Galen A. McKinley, Thea Hatlen Heimdal, Amanda R. Fay.
+              </p>
+            </div>
+          </details>
+          <p class="poster-label" style="margin-top:14px">
+            Poster in preparation for AGU 2026 — it will be posted here once finished.
+          </p>
+        </div>
+
+        <div class="res-right">
+          <div class="poster-card">
+            <img class="poster-thumb" src="assets/img/pres-mckinley.jpg"
+                 alt="Anna Chen presenting her testbed research at the LDEO Mini-Symposium on AI-based Science"
+                 data-zoom="assets/img/pres-mckinley.jpg" style="object-fit:cover">
+            <p class="poster-label">
+              Presenting at the LDEO Mini-Symposium on AI-based Science, Spring 2026.
+            </p>
+          </div>
+
+          <div>
+            <p class="res-heading">Also presented at</p>
+            <ul class="res-list">
+              <li>AGU 2026 Annual Meeting, San Francisco (poster)</li>
+              <li>Undergraduate Research Symposium, Columbia University, Fall 2026 (poster)</li>
+              <li>McKinley/Lovenduski Group Meeting, CU Boulder, Summer 2026 (talk)</li>
+              <li>Mini-Symposium on AI-based Science, LDEO, Spring 2026 (talk)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ============================================================
+       PROJECT 2 — McMANUS
+       ============================================================ -->
+  <article class="project" id="lig-sst">
+    <div class="proj-num">02</div>
+    <h2>Global Reconstruction of Last Interglacial Sea Surface Temperatures and Their
+        Uncertainties by an Iterated Reduced-Space Optimal Interpolation Procedure</h2>
+
+    <div class="proj-meta">
+      <span><b>Lab</b> · McManus Lab, LDEO</span>
+      <span><b>International Collaboration</b> · <a href="https://www.hiseas.org/">HISEAS</a> (NSF-funded)</span>
+      <span><b>PI &amp; Mentor</b> · Jerry F. McManus</span>
+      <span><b>Mentor</b> · Alexey Kaplan</span>
+      <span><b>Spring 2025 – present</b></span>
+    </div>
+
+    <div class="tags">
+      <span class="tag tag-accent">AGU 2026 poster</span>
+      <span class="tag tag-fund">Data Science Institute Scholars Program</span>
+      <span class="tag tag-fund">Heinrich Family Global Fellowship</span>
+      <span class="tag">Python</span>
+    </div>
+
+    <div class="proj-body">
+      <div>
+        <p>
+          The Last Interglacial (130–115 ka) was the most recent interval during which global
+          temperatures were warmer than today. Its sea-surface temperature variability offers a
+          natural analog for how the ocean responds to modern warming. Proxy records of that interval are
+          sparse and unevenly placed, so recovering a global field from them can provide significantly better understanding
+          of the onset and development of this warm interval.
+        </p>
+        <p>
+          Starting from the 104 temporally interpolated proxy time series compiled by Hoffman et al.
+          (2017), this project produces a global field reconstruction of LIG sea-surface temperature
+          at 1°×1° resolution and 0.1 kyr intervals, complete with grid-wise uncertainty estimates.
+        </p>
+      </div>
+      <div class="role-box">
+        <h3>My role</h3>
+        <p>
+          I implemented the reconstruction in Python. I performed Empirical Orthogonal Function
+          analysis on modern annual HadISST v1.1 fields (1870–2020), computed Reduced-Space Optimal
+          Interpolation weight vectors in a 20-dimensional reduced space, and iterated the procedure
+          until the SST mean and covariance converged — which happened by the fifth iteration. I
+          propagated both the published proxy uncertainties and the truncation error of the reduced
+          space into grid-wise uncertainties and uncertainty covariances.
+        </p>
+        <p>
+          The leading 20 eigenvalues explain 88% of the variance in centennial means. The Northern
+          Hemisphere extratropics show the greatest sensitivity to both warming and cooling, the
+          tropics the lowest anomaly throughout; global mean SST peaks at +0.2 °C above the 1870–2020
+          mean around 126 ka and returns to near-modern values by 121 ka. To test the reconstruction
+          independently, I mined contributor data files from the NOAA Paleoclimatology database and
+          recovered 62 proxy-based LIG SST records absent from the Hoffman compilation. That
+          validation is ongoing.
+        </p>
+      </div>
+    </div>
+
+    <figure class="fig">
+      <div class="fig-frame" data-zoom="assets/figures/mcmanus-lig-sst.gif"
+           data-zoom-alt="Animated global reconstruction of Last Interglacial sea-surface temperature anomaly from 130 to 115 ka">
+        <img src="assets/figures/mcmanus-lig-sst.gif"
+             alt="Animated map of reconstructed Last Interglacial sea-surface temperature anomaly evolving from 130 to 115 thousand years ago">
+      </div>
+      <figcaption>
+        Global-field reconstructed SST anomaly across 130.0–115.0 ka using Reduced-Space Optimal
+        Interpolation from the Hoffman et al. (2017) deep-ocean core thermo-proxy dataset. Baseline
+        climatology: 1870–2020.
+        <span class="zoom-hint">Animated · click to enlarge</span>
+      </figcaption>
+    </figure>
+
+    <div class="resources">
+      <h3>Materials</h3>
+      <div class="res-grid">
+        <div>
+          <details class="abstract">
+            <summary>Read the AGU 2026 abstract</summary>
+            <div class="abstract-body">
+              <p>
+                The Last Interglacial (LIG, 130-115 ka) was the most recent interval during which
+                global temperatures were warmer than today. LIG sea surface temperature (SST)
+                variability offers a natural analog for evaluating ocean-climate responses under
+                ongoing warming. Utilizing the best-current proxy-based dataset of 104 temporally
+                interpolated timeseries over 130-115 ka from Hoffman et al. (2017), we provide a
+                preliminary global field reconstruction of LIG SST at 0.1 kyr intervals and
+                1-by-1-degree horizontal resolution using Reduced-Space Optimal Interpolation (RSOI).
+                We perform Empirical Orthogonal Function (EOF) analysis on annual modern SST fields
+                from the HadISST v1.1 dataset (1870-2020). Treating the Hoffman et al. dataset as
+                independent observations, weight vectors are computed by RSOI from a 20-dimensional
+                “reduced” space, so that the full field SST is reconstructed as a weighted sum of the
+                20 leading EOFs. The estimated grid wise uncertainties and uncertainty covariances are
+                calculated from the proxy uncertainties provided by Hoffman et al. and the truncation
+                error of full dimensional SST to the reduced space. By iterating the RSOI procedure,
+                the mean and covariance of the SST field converged by the 5th iteration. In the
+                resulting reconstruction, the first 20 eigenvalues explain 88% of the total variance in
+                centennial means. The spatio-temporal evolution of the reconstructed SST generally
+                matches published literature. The Northern Hemisphere extratropics show the greatest
+                sensitivity to both warming and cooling. The tropics have the lowest SST anomaly
+                throughout the LIG. Maximal global mean SST of +0.2 deg C from the 1870-2020 mean is
+                reached around 126 ka, and near-modern global mean SST is reached by 121 ka. Overall,
+                the RSOI method provided a computationally efficient, well-constrained, and
+                high-resolution solution, complete with its uncertainty estimates. For the planned
+                further assessment of reconstruction’s fidelity, we mined the contributor data files
+                from the NOAA Paleoclimatology database, resulting in finding 62 records of
+                proxy-based LIG SST estimates that are independent of the Hoffman et al. compilation.
+              </p>
+              <p class="session">
+                <b>AGU 2026 Annual Meeting</b>, San Francisco · Session <b>PP008</b> — Late Quaternary
+                Climate and Environmental Change: Proxies, Processes, and Models.<br>
+                Anna Chen, Alexey Kaplan, Jerry F. McManus.
+              </p>
+            </div>
+          </details>
+
+          <p class="poster-label" style="margin-top:14px">
+            <b style="color:var(--text)">Preliminary data products</b><br>
+            Gridded SST, SST anomaly, and standard deviation — 1°×1° at 100-year intervals across
+            130–115 ka — are browsable on the LDEO data server.<br>
+            <a href="https://albus.ldeo.columbia.edu/expert/%28/home/ak/ANNA_CHEN/20260311/%29readfile/">Browse the data products →</a>
+          </p>
+        </div>
+
+        <div class="res-right">
+          <div class="poster-card">
+            <a class="poster-thumb" href="assets/posters/Chen_LIG_SST_poster.pdf"
+               data-zoom="assets/posters/poster-lig-full.jpg" data-zoom-deep
+               data-zoom-alt="Poster: Last Interglacial Sea-Surface Temperature Reconstruction using Reduced-Space Optimal Interpolation">
+              <img src="assets/posters/poster-lig-preview.jpg"
+                   alt="Conference poster on Last Interglacial sea-surface temperature reconstruction">
+            </a>
+            <p class="poster-label">
+              <b style="color:var(--text)">Poster</b> — LDEO Geochemistry Poster Session, Fall 2025.
+              Click to enlarge ·
+              <a href="assets/posters/Chen_LIG_SST_poster.pdf">Download PDF</a>
+            </p>
+          </div>
+
+          <div class="poster-card">
+            <img class="poster-thumb" src="assets/img/pres-mcmanus.jpg"
+                 alt="Anna Chen presenting her Last Interglacial poster with Prof. Jerry McManus"
+                 data-zoom="assets/img/pres-mcmanus.jpg" style="object-fit:cover">
+            <p class="poster-label">
+              Presenting the reconstruction at LDEO with Prof. Jerry McManus.
+            </p>
+          </div>
+
+          <div>
+            <p class="res-heading">Also presented at</p>
+            <ul class="res-list">
+              <li>Data Science Institute Scholars Poster Presentation, Columbia University, Spring 2025 (poster)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ============================================================
+       PROJECT 3 — HURLEY
+       ============================================================ -->
+  <article class="project" id="phytoplankton-npp">
+    <div class="proj-num">03</div>
+    <h2>Seasonal and Geospatial Analysis on Geochemical Ocean Conditions in Areas with High
+        Marine Phytoplankton Productivity</h2>
+
+    <div class="proj-meta">
+      <span><b>Lab</b> · Hurley Lab, LDEO</span>
+      <span><b>Project</b> · <a href="https://hurley.ldeo.columbia.edu/research-projects/carbon-fixation-future-oceans">Carbon Fixation in Future Oceans</a> (NSF-funded)</span>
+      <span><b>PI &amp; Mentor</b> · Sarah J. Hurley</span>
+      <span><b>Mentor</b> · Henry C. Holm</span>
+      <span><b>Summer 2024 – Spring 2025</b></span>
+    </div>
+
+    <div class="tags">
+      <span class="tag tag-accent">Complete</span>
+      <span class="tag tag-accent">Co-authored manuscript in preparation</span>
+      <span class="tag tag-fund">Laidlaw Scholarship</span>
+      <span class="tag">R</span>
+      <span class="tag">Wet lab</span>
+    </div>
+
+    <div class="proj-body">
+      <div>
+        <p>
+          Carbon fixation by marine phytoplankton shapes the global carbon cycle, and
+          climate change will alter it — but the magnitude and direction of that change are
+          poorly constrained. Because phytoplankton adapt readily, lab experiments that aim to predict
+          future growth need accurate present and future conditions to grow them in.
+        </p>
+        <p>
+          This project constrains the temporal and spatial variability of two physical controls:
+          temperature and pCO<sub>2</sub>, specifically in the places where net primary production is
+          highest — which turn out different from the regional averages.
+        </p>
+      </div>
+      <div class="role-box">
+        <h3>My role</h3>
+        <p>
+          I carried out the full analysis in R. I combined satellite net primary production (NPP) with SST 
+          and pCO<sub>2</sub> 1°×1° datasets,
+          re-gridded and area-weighted the three sources, then computed regional means and NPP-weighted
+          geochemical parameters to measure how the water where blooms actually occur deviates from its regional
+          average, and how this differs seasonally.
+        </p>
+        <p>
+          Across 14 ocean regions, and with the exception of the Southern Ocean, summer blooms occur
+          in water that is cooler and lower in pCO<sub>2</sub> than the regional mean, while winter
+          growth occurs in warmer, higher-pCO<sub>2</sub> water. The practical conclusion for
+          experimentalists is that growth conditions should be set from the deviation of in-situ
+          conditions in high-growth areas, not from seasonal and regional averages. Alongside the
+          analysis, I trained in laboratory practices, including phytoplankton culturing, flow cytometry, 
+          media making, and sterile techniques.
+        </p>
+      </div>
+    </div>
+
+    <figure class="fig">
+      <div class="fig-frame" data-zoom="assets/figures/hurley-fig.png" data-zoom-deep
+           data-zoom-alt="Regional deviation of NPP-weighted temperature and pCO2 from in-situ values across 14 ocean regions">
+        <img src="assets/figures/hurley-fig.png"
+             alt="Bar charts of regional deviation between NPP-weighted and in-situ sea surface temperature and pCO2, by month">
+      </div>
+      <figcaption>
+        <b>(Left)</b> Regional deviation between sea-surface temperature weighted by net primary
+        production (NPP) and in-situ temperature. <b>(Right)</b> Regional deviation between
+        pCO<sub>2</sub> weighted by NPP and in-situ pCO<sub>2</sub>. Satellite-based NPP data are
+        retrieved from the Carbon-based Production Model; surface ocean temperature from the World
+        Ocean Atlas; and pCO<sub>2</sub> from the Global Ocean Surface Water pCO<sub>2</sub> Database.
+        Horizontal resolution is 1°×1°.
+        <span class="zoom-hint">Click to enlarge</span>
+      </figcaption>
+    </figure>
+
+    <div class="resources">
+      <h3>Materials</h3>
+      <div class="res-grid">
+        <div>
+          <details class="abstract">
+            <summary>Read the project abstract</summary>
+            <div class="abstract-body">
+              <p>
+                Carbon fixation by marine phytoplankton is crucial in influencing the pelagic and
+                global carbon cycle. Future climatic changes likely affect phytoplankton growth and the
+                net primary production (NPP) of surface ocean. However, the magnitude and
+                directionality of growth changes are poorly constrained. Since phytoplankton are highly
+                adaptable, understanding future growth in lab-based experimentation requires accurate
+                current and future conditions. Hence, this study seeks to constrain the temporal and
+                spatial variability of two important physical factors (temperature, CO<sub>2</sub>) in
+                areas of high NPP. Historical ocean conditions were examined by combining observational
+                data and modeled products. For growth estimates, the author utilized satellite data
+                from the Carbon-based Production Model, a monthly and global estimate of marine NPP at
+                1/6º-by-1/6º grids. Surface ocean temperature was provided by the World Ocean Atlas,
+                and the partial pressure of CO<sub>2</sub> (pCO<sub>2</sub>) from the Global Ocean
+                Surface Water pCO<sub>2</sub> Database. The author calculated regional means and
+                weighted conditions by NPP to evaluate how marine conditions with high NPP deviated
+                from regional averages. Results across 14 regions show that, apart from the Southern
+                Ocean, summer phytoplankton blooms mostly occur in areas with lower temperatures and
+                lower pCO<sub>2</sub> conditions relative to regional averages. Opposingly, winter
+                phytoplankton growth occurs in areas with higher temperatures and pCO<sub>2</sub>.
+                These findings provide insights for lab-based experiments. Rather than viewing growth
+                uniformly across time and space, researchers should focus on the deviation of in-situ
+                conditions in high-growth areas from their seasonal and regional averages to reflect
+                temporally- and spatially-varied growth, outlining more accurate climatological
+                contexts for future lab-based experimentation.
+              </p>
+              <p class="session">
+                Mentors: <b>Dr. Sarah Hurley</b>, <b>Dr. Henry Holm</b>. Laidlaw Undergraduate Research
+                and Leadership Scholarship, Summer 2024.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div class="res-right">
+          <div class="poster-card">
+            <a class="poster-thumb" href="assets/posters/Chen_NPP_poster.pdf"
+               data-zoom="assets/posters/poster-npp-full.jpg" data-zoom-deep
+               data-zoom-alt="Poster: Seasonal and Geospatial Analysis on Geochemical Ocean Conditions in Areas with High Marine Phytoplankton Productivity">
+              <img src="assets/posters/poster-npp-preview.jpg"
+                   alt="Conference poster on geochemical ocean conditions in areas of high phytoplankton productivity">
+            </a>
+            <p class="poster-label">
+              <b style="color:var(--text)">Poster</b> — presented at LDEO and Columbia, 2024–2025.
+              Click to enlarge ·
+              <a href="assets/posters/Chen_NPP_poster.pdf">Download PDF</a>
+            </p>
+          </div>
+
+          <div class="poster-card">
+            <img class="poster-thumb" src="assets/img/pres-hurley.jpg"
+                 alt="Anna Chen presenting her phytoplankton productivity poster"
+                 data-zoom="assets/img/pres-hurley.jpg" style="object-fit:cover">
+          </div>
+
+          <div>
+            <p class="res-heading">Presented at</p>
+            <ul class="res-list">
+              <li>LDEO 75th Anniversary Mini Symposium, Fall 2024</li>
+              <li>Undergraduate Computer and Data Science Research Fair, Columbia DSI, Fall 2024</li>
+              <li>Undergraduate Research Symposium, Columbia University, Fall 2024</li>
+              <li>North America Laidlaw Scholars Conference, Columbia University, Fall 2024 (panel/talk)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div style="padding-block:20px 60px" class="rule-top">
+    <div class="btn-row">
+      <a class="btn btn-solid" href="assets/docs/Anna_Chen_CV.pdf">Download full CV (PDF)</a>
+      <a class="btn" href="publications.html">Publications &amp; awards</a>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Anna Chen · Columbia University</div>
+    <div>
+      <a href="mailto:yc4406@columbia.edu">yc4406@columbia.edu</a> ·
+      <a href="https://orcid.org/0009-0008-9717-116X">ORCID</a> ·
+      <a href="https://www.linkedin.com/in/anna-yiyu-chen/">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
